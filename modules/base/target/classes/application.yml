@@ -1,0 +1,135 @@
+spring:
+  application:
+    name: LEMS-BASE
+  # dev本地环境    test测试环境   prod生产环境
+  profiles:
+    active: dev
+  main:
+    banner-mode: "off"
+  #  cloud:
+  #    config:
+  #      profile: development
+  #      uri: http://localhost:8888
+  #  redis:
+  #    cluster:
+  #      nodes: 10.213.3.105:6379,10.213.3.107:6379,10.213.6.159:6379
+  #    database: 0
+  #    password: ''
+  #    lettuce:
+  #      pool:
+  #        max-idle: 8
+  #        min-idle: 0
+  #        max-active: 8
+  #        max-wait: -1
+  redis:
+    database: 15
+    #    后期换成自己的redis远程服务器
+    host: localhost
+    port: 6379
+    password: ''
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: -1ms
+  session:
+    store-type: redis
+  cache:
+    cache-names: dic
+  #  http:
+  #    converters:
+  #      preferred-json-mapper:
+  # 默认值为 classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  #  resources:
+  #    static-locations: /static/
+  servlet:
+    multipart:
+      enabled: true
+      location: /tmp
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# 访问端口和上下文路径配置，默认port为80，context-path为空
+server:
+  port: 8762
+  servlet:
+    session:
+      timeout: 1200
+
+#  servlet:
+#    context-path: /elementspeed
+#  jsp 支持
+#  mvc: 
+#    view: 
+#      prefix: /WEB-INF/pages/
+#      suffix: .jsp
+#    static-path-pattern: /static/**
+#  关闭默认模板引擎
+#  thymeleaf:
+#    cache: false
+#    enabled: false
+#  Freemarker 配置
+#  freemarker:
+#    template-loader-path: classpath:/templates/
+#    cache: false
+#    charset: UTF-8
+#    check-template-location: true
+#    content-type: text/html
+#    expose-request-attributes: true
+#    expose-session-attributes: true
+#    request-context-attribute: request
+#    suffix: .ftl
+
+# mapperLocations指的路径是src/main/resources
+mybatis:
+  # 自动分页插件pageHelper需要设置该属性
+  typeAliasesPackage: com.isea533.ssm.model
+  mapperLocations: classpath*:com/msgcloud/**/mapper/mysql/**/*.xml
+  configLocation: classpath:config/mybatis/MyBatis-Configuration.xml
+
+# 显示SQL
+logging:
+  level:
+    com:
+      elementspeed: debug
+#先关闭客户端做功能开发  
+eureka:
+  register-with-eureka: true
+  #    表示自己为注册中心
+  fetch-registry: true
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka
+
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost
+#    enabled: true
+#  instance:
+#    healthCheckUrlPath: ${server.servletPath}/health
+#    statusPageUrlPath: ${server.servletPath}/info
+#    homePageUrl: ${server.servletPath}/
+#    healthcheck:
+#      enabled: true
+
+ribbon:
+  # 连接超时
+  ConnectTimeout: 30000
+  # 响应超时
+  ReadTimeout: 60000
+  eureka:
+    enable: true
+
+# 是否开启验证码（YES&NO）
+srm:
+  isOpen:
+  kaptcha: NO
+
+
+jwt:
+  #token生成密钥
+  secret: XFKEYMS190701GHMAK87WEE02375UWEZ
+  #token过期时间 单位:秒 默认2小时
+  expiretime: 7200

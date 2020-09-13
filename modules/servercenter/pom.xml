@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lems-parent</artifactId>
+        <groupId>com.msgcloud</groupId>
+        <version>1.0</version>
+        <relativePath>../../parent/</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>lems-servercenter</artifactId>
+    <packaging>jar</packaging>
+    <version>${elementspeed.version}</version>
+    <name>lems :: ServerCenter</name>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>lems-servercenter</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- 打包测试用的jar包，classfier为tests -->
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>com/elementspeed/test/**/*.class</include>
+                            </includes>
+                            <excludes>
+                                <exclude>com/elementspeed/test/**/*Test.class</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>dockerfile</id>-->
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    <plugin>-->
+<!--                        <groupId>com.spotify</groupId>-->
+<!--                        <artifactId>dockerfile-maven-plugin</artifactId>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+
+
+</project>

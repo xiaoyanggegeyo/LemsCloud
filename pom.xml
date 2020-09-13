@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--顶级父项目的groupid-->
+    <groupId>com.msgcloud</groupId>
+    <!--顶级父项目的artifactId-->
+    <artifactId>lems-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Msgcloud :: Project</name>
+    <packaging>pom</packaging>
+
+    <description>MsgCloud is a Supply chain powerful system based JavaEE application reference architecture. </description>
+    <url>http://www.msgcloud.com</url>
+    <inceptionYear>2020</inceptionYear>
+    <organization>
+        <name>Msgcloud</name>
+        <url>http://www.msgcloud.xyz</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>ys</id>
+            <name>ys</name>
+            <email>ys at mail.msgcloud.xyz</email>
+            <organization>Msgcloud</organization>
+            <roles>
+                <role>Project depveloper</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+
+    </developers>
+
+    <!--<licenses>-->
+        <!--<license>-->
+            <!--<name>No License</name>-->
+            <!--<url>http://www.elementspeed.com/licenses/LICENSE-1.0</url>-->
+        <!--</license>-->
+    <!--</licenses>-->
+
+    <!--配置其下所有子模块-->
+    <modules>
+        <module>parent</module>
+        <module>modules</module>
+    </modules>
+
+    <issueManagement>
+        <system>elementspeed</system>
+        <url>http://www.msgcloud.xyz/issues</url>
+    </issueManagement>
+
+    <scm>
+        <url>http://www.msgcloud.xyz</url>
+        <connection>svn</connection>
+        <developerConnection>svn</developerConnection>
+    </scm>
+
+
+</project>

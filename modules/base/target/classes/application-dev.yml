@@ -1,0 +1,28 @@
+#开发配置
+spring:
+  datasource:
+    name: nfsrm
+    url: jdbc:mysql://127.0.0.1:3306/lems?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&tinyInt1isBit=false&allowMultiQueries=true
+    username: root
+    password: 1589559hsy
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 50
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+#开启页面验证码
+srm:
+  isOpen:
+    kaptcha: NO

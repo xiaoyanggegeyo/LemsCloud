@@ -1,0 +1,51 @@
+#开发配置
+spring:
+  datasource:
+    name: nfsrm
+    jdbc-url: jdbc:mysql://srm-test-mysql.idc.yst.com.cn:3306/nfsrm?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true&useSSL=false
+    username: nfsrm
+    password: nfsrm@123
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 50
+#   初始化连接 
+    initialSize: 1
+#   从池中取连接的最大等待时间，单位ms.  
+    maxWait: 60000 
+#   最小空闲连接 
+    minIdle: 1
+#   每60秒运行一次空闲连接回收器
+    timeBetweenEvictionRunsMillis: 60000
+#   池中的连接空闲30分钟后被回收  
+    minEvictableIdleTimeMillis: 300000
+#   验证使用的SQL语句
+    validationQuery: select 'x'
+#   指明连接是否被空闲连接回收器(如果有)进行检验.如果检测失败,则连接将被从池中去除. 
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    db2:
+      name: nf_colipu_midd
+      jdbc-url: jdbc:mysql://srm-test-mysql.idc.yst.com.cn:3306/nf_colipu_midd?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true&useSSL=false
+      username: nf_colipu_midd
+      password: nf_colipu_midd
+      driver-class-name: com.mysql.jdbc.Driver
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      maxActive: 50
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
