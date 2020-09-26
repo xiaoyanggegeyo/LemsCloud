@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules/base/lems-base.iml" filepath="$PROJECT_DIR$/modules/base/lems-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/common/lems-common.iml" filepath="$PROJECT_DIR$/modules/common/lems-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/core/lems-core.iml" filepath="$PROJECT_DIR$/modules/core/lems-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/lems-modules.iml" filepath="$PROJECT_DIR$/modules/lems-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/lems-parent.iml" filepath="$PROJECT_DIR$/parent/lems-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lems-project.iml" filepath="$PROJECT_DIR$/lems-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/base/src/main/main1.iml" filepath="$PROJECT_DIR$/modules/base/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/servercenter/servercenter.iml" filepath="$PROJECT_DIR$/modules/servercenter/servercenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/test.iml" filepath="$PROJECT_DIR$/modules/test.iml" />
+    </modules>
+  </component>
+</project>

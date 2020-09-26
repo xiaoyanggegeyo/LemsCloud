@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="servercenter" />
+        <module name="lems-common" />
+        <module name="lems-core" />
+        <module name="test" />
+        <module name="lems-base" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="elementspeedcloud-modules" target="1.8" />
+      <module name="lems-base" target="1.8" />
+      <module name="lems-common" target="1.8" />
+      <module name="lems-core" target="1.8" />
+      <module name="lems-modules" target="1.8" />
+      <module name="lems-parent" target="1.8" />
+      <module name="lems-project" target="1.5" />
+      <module name="lems-servercenter" target="1.8" />
+      <module name="servercenter" target="1.8" />
+      <module name="servercenter (1)" target="1.8" />
+      <module name="test" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lems-base" options="-parameters" />
+      <module name="lems-common" options="-parameters" />
+      <module name="lems-core" options="-parameters" />
+      <module name="servercenter" options="-parameters" />
+      <module name="servercenter (1)" options="-parameters" />
+    </option>
+  </component>
+</project>
